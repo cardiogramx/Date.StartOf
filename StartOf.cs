@@ -4,6 +4,9 @@ namespace Date.StartOf
 {
     public static partial class StartOf
     {
+        public static DateTime StartOfBusinessDay(this DateTime dateTime) =>
+           new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 8, 0, 0);
+
         public static DateTime StartOfDay(this DateTime dateTime) =>
             new DateTime(dateTime.Year, dateTime.Month, dateTime.Day);
 
