@@ -2,6 +2,27 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>Date.StartOf</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>cardiogramx</Authors>
+    <Copyright>Felix Kolawole</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageLicenseUrl>https://licences.nuget.org/MIT</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Owners>cardiogramx</Owners>
+    <PackageProjectUrl>https://github.com/cardiogramx/Date.StartOf</PackageProjectUrl>
+    <PackageReleaseNotes>- All outputs are in UTC format
+- All outputs are a type of System.DateTime struct</PackageReleaseNotes>
+    <Summary>This package consists of extensions which are useful in extending the existing capabilities of the System.DateTime struct.</Summary>
+    <PackageTags>DateTime, Extensions, UTC, Business, DateTime.StartOfDay, DateTime.StartOfBusinessDay, DateTime.StartOfWeek, DateTime.StartOfBusinessWeek, DateTime.StartOfMonth, DateTime.StartOfYear</PackageTags>
+    <Title>Date.StartOf</Title>
+    <Description>This package consists of extensions which are useful in extending the existing capabilities of the System.DateTime struct. </Description>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
 </Project>
