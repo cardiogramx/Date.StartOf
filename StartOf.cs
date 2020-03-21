@@ -7,6 +7,18 @@ namespace Date.StartOf
         public static DateTime StartOfDay(this DateTime dateTime) =>
             new DateTime(dateTime.Year, dateTime.Month, dateTime.Day);
 
+        public static DateTime StartOfBusinessWeek(this DateTime dateTime) => dateTime.DayOfWeek switch
+        {
+            DayOfWeek.Tuesday => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day).AddDays(-1),
+            DayOfWeek.Wednesday => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day).AddDays(-2),
+            DayOfWeek.Thursday => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day).AddDays(-3),
+            DayOfWeek.Friday => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day).AddDays(-4),
+            DayOfWeek.Saturday => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day).AddDays(-5),
+            DayOfWeek.Sunday => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day).AddDays(-6),
+
+            _ => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day)
+        };
+
         public static DateTime StartOfWeek(this DateTime dateTime) => dateTime.DayOfWeek switch
         {
             DayOfWeek.Monday => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day).AddDays(-1),
@@ -15,6 +27,7 @@ namespace Date.StartOf
             DayOfWeek.Thursday => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day).AddDays(-4),
             DayOfWeek.Friday => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day).AddDays(-5),
             DayOfWeek.Saturday => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day).AddDays(-6),
+
             _ => new DateTime(dateTime.Year, dateTime.Month, dateTime.Day)
         };
 
